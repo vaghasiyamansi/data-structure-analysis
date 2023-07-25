@@ -1,15 +1,22 @@
-#include<stdio.h>
+ #include<stdio.h>
+#define n 5
 int main(){
-    int a[5],i;
-    for(i=0;i<5;i++)
+    int a[10],i,j,t;
+
+    for(i=0;i<n;i++)
     {
         printf("enter value a[%d]:",i);
         scanf("%d",&a[i]);
     }
-   
-    for(i=1;i<4;i++){
-        printf("%d",a[i]);
-        printf("\t");
+    t=a[0];     //store the first element 
+    for(i=0;i<n;i++){
+        a[i]=a[i+1];   //incr element one position
     }
-    printf("%d \t %d",a[4],a[0]);
+    a[n-1]=t;   // first element place at the end
+    for(i=0;i<n;i++)
+    {
+        printf("\t%d",a[i]);
+    }
+   
+    return 0;
 }

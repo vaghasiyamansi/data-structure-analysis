@@ -1,27 +1,26 @@
 #include<stdio.h>
-int main()
+int main(){
+    int Arr1[5],Arr2[5],Array[10],i,t,s1,s2;
+    printf("Array 1 Size:");
+    scanf("%d",&s1);
+    for(i=0;i<s1;i++)
+    {
+        printf("Arr1[%d]:",i);
+        scanf("%d",&Arr1[i]);
+        Array[i]=Arr1[i];
+    }
+    t=i;
+    printf("Array 2 Size");
+    scanf("%d",&s2);
+    for(i=0;i<s2;i++)
+    {
+        printf("Arr2[%d] ",i);
+        scanf("%d",&Arr2[i]);
+        Array[t++]=Arr2[i];
+    }
+    printf("After Marge:\n");
+    for(i=0;i<t;i++)
 {
-      
-      int a[5],b[5],i,merge[10];
-      for(i=0; i<5; i++)
-      {
-            printf("enter the value of a[%d]:",i);
-            scanf("%d",&a[i]);
-      }
-      for(i=0; i<5; i++)
-      {
-            printf("enter the value of b[%d]:",i);
-            scanf("%d",&b[i]);
-      }
-      for(i=0; i<5; i++)
-      {
-             merge[i]=a[i];
-             merge[i+5]=b[i];
-      }
-      printf("\nmerge array:");
-      for(i=0; i<10; i++)
-      {
-             printf("%d",merge[i]);
-      }
-
+        printf("%d",Array[i]);
+    }
 }
